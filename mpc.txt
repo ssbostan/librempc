@@ -1,0 +1,34 @@
+/*
+ * Project: libreMPC
+ * Description: Multiple Precision Arithmetic
+ * Version: 0.0.2a (Alpha)
+ *
+ * License: BSD 3-Clause "New" or "Revised" License.
+ *
+ * Copyright (c) 2014 Saeid Bostandoust <ssbostan@gmail.com>
+ *
+ * Created on April 10, 2014, 05:52 PM
+ *
+ * Functions:
+ * int mpc_init(mpc_t *dst, char *src); // initialize mpc_t struct with a number string.
+ * int mpc_destroy(mpc_t *ptr); // destroy mpc_t struct.
+ * int mpc_copy(mpc_t *dst, mpc_t *src); // copy one mpc_t struct to another one.
+ * int mpc_tostr(mpc_t *src, char **dst); // convert content of mpc_t struct to a printable string.
+ * int mpc_add(mpc_t *dst, mpc_t op1, mpc_t op2); // sum of two mpc_t struct.
+ * int mpc_mul(mpc_t *dst, mpc_t op1, mpc_t op2); // mul of two mpc_t struct.
+ *
+ * Example:
+ * mpc_t a, b, add_test, mul_test;
+ * char *add_str, *mul_str;
+ * mpc_init(&a, "98765432345678776543222999987547889");
+ * mpc_init(&b, "1236488837733127273773837837882223673277493767109891734400090");
+ * mpc_add(&add_test, a, b);
+ * mpc_mul(&mul_test, a, b);
+ * mpc_tostr(&add_test, &add_str);
+ * mpc_tostr(&mul_test, &mul_str);
+ * mpc_destroy(&mul_test);
+ * mpc_destroy(&add_test);
+ * mpc_destroy(&b);
+ * mpc_destroy(&a);
+ *
+ */
